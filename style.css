@@ -1,3 +1,21 @@
+@keyframes full-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 h1 {
     font-family: 'Helvetica Neue', 'Arial', sans-serif;
 }
@@ -22,6 +40,11 @@ p {
 a {
     font-family: 'Helvetica Neue', 'Arial', sans-serif;
     color: #2f80ed;
+    transition: all 0.7s ease 0s;
+}
+
+a:hover {
+    opacity: 50%;
 }
 
 .page {
@@ -40,6 +63,7 @@ a {
     padding-top: 30px;
     padding-bottom: 30px;
     position: relative;
+    overflow: hidden;
 }
 
 .logo {
@@ -64,6 +88,7 @@ a {
     height: 568px;
     width: 568px;
     z-index: -2;
+    animation: full-spin 20s linear 0s infinite normal forwards;
 }
 
 .description {
@@ -111,30 +136,94 @@ a {
     margin-bottom: 0;
 }
 
+.techniques {
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.techniques__content {
+    display: flex;
+    width: 920px;
+    justify-content: space-between;
+    padding-top: 60px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.techniques__card {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+}
+
+.techniques__card-image{
+    width: 160px;
+    height: 160px;
+    margin: 0 40px 43px;
+    border-radius: 50%;
+}
+
+.techniques__card-title {
+    margin: 0 auto 16px;
+    text-align: center;
+    width: 240px;
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+.techniques__card-content {
+    margin-top: 0 auto;
+    width: 240px;
+    text-align: center;
+    line-height: 23px;
+    font-size: 18px;
+    font-weight: normal;
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+.iframes {
+    margin: 50px auto 0;
+    display: flex;
+    width: fit-content;
+}
+
+.video-one {
+    margin-right: 20px;
+}
+
 .digits__wrapper {
     width: 60%;
     margin: auto;
     text-align: center;
 }
 
-.digits__title {
+.section__title {
     font-family: 'Helvetica Neue', 'Arial', sans-serif;
     line-height: 1.15;
     font-size: 60px;
     font-weight: 600;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto 20px;
 }
 
-.digits__subtitle {
+.section__subtitle {
     font-family: 'Helvetica Neue', 'Arial', sans-serif;
     margin-top: 20px;
     line-height: 34px;
     font-size: 24px;
     font-weight: normal;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
 }
 
 .digits__main-content {
     width: 1100px;
-    margin: 0 auto 0;
+    margin: 0 auto 100px;
     padding-top: 60px;
     display: flex;
     flex-direction: row;
@@ -181,6 +270,69 @@ a {
     margin-bottom: 0;
 }
 
+.khan {
+    margin: 0 auto;
+    width: 80%;
+    padding-top: 105px;
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+.khan__subtitle {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 42px;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.khan__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.15;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.khan__quote {
+    width: 790px;
+    margin: 50px auto 36px 0;
+    padding: 0;
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.khan__quote-author {
+    margin: 0 auto 10px 0;
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.khan__quote-subline {
+    margin-left: 0;
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.khan__book {
+    display: flex;
+}
+
+.khan__book-image {
+    width: 608px;
+    height: 620px;
+    margin-right: 48px;
+}
+
+.khan__link {
+    line-height: 42px;
+    font-size: 30px;
+    font-weight: normal;
+    height: fit-content;
+}
+
 .feynman {
     width: 100%;
     height: 890px;
@@ -216,7 +368,7 @@ a {
     font-weight: normal;
 }
 
-.feynman__hyper {
+.feynman__link {
     position: absolute;
     right: 48px;
     top: 50%;
@@ -237,6 +389,7 @@ a {
     position: relative;
     background-color: #1f1f1f;
     color: white;
+    overflow: hidden;
 }
 
 .kaufman__title {
@@ -309,6 +462,19 @@ a {
     right: -210px;
     top: 0;
     z-index: 0;
+    animation: full-spin 20s linear 0s infinite normal forwards;
+}
+
+.resources__logo-zone {
+    display: flex;
+    margin: 80px auto 217px;
+    width: 1100px;
+}
+
+.resources__link {
+    margin: 0;
+    width: 270px;
+    height: 38px;
 }
 
 .footer {
